@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO Test</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        window.onload = () => {
+            const socket = io({
+              transports: ["websocket"],
+            });
+            const form = document.querySelector('form');
+            form.onsubmit = e => {
+                e.preventDefault();
+                socket.emit('request', 'testing testing..');
+                return false;
+            };
+            socket.on('msg', (msg) => {
+                console.log(msg);
+            });
+        };
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <button>Send Request</button>
+    </form>
+  </body>
+</html>

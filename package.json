@@ -1,0 +1,16 @@
+{
+  "name": "@glidingdeer/ws-server-test",
+  "version": "0.1.0",
+  "description": "Websocket connection test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavel Khlopin <pavel@glidingdeer.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "koa": "2.13.1",
+    "koa-router": "10.0.0",
+    "socket.io": "4.1.2"
+  }
+}
